@@ -10,14 +10,14 @@ class Stack {
   }
 
   /** Remove the item at the top of the stack
-   * @returns {any}
+   * @returns {any} Item being removed
    */
   pop() {
     return this.#items.pop()
   }
 
-  /** Remove the item at the top of the stack
-   * @returns {any} Item being removed
+  /** Return the item at the top of the stack
+   * @returns {any} Item at the top
    */
   peek() {
     return this.#items[this.#items.length - 1]
