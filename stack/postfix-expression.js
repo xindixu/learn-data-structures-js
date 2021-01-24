@@ -31,7 +31,7 @@ const calculatePostfixExp = (exp) => {
     return stack.push(parseInt(i, 10))
   })
 
-  return parseInt(stack.peek(), 10)
+  return parseInt(stack.top(), 10)
 }
 
 export default calculatePostfixExp

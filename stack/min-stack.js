@@ -8,7 +8,7 @@ class MinStack {
   push(item) {
     this.#dataStack.push(item)
 
-    const min = this.#minStack.peek() || Number.MAX_SAFE_INTEGER
+    const min = this.#minStack.top() || Number.MAX_SAFE_INTEGER
     if (item <= min) {
       this.#minStack.push(item)
     }
@@ -16,14 +16,14 @@ class MinStack {
 
   pop() {
     const item = this.#dataStack.pop()
-    if (item === this.#minStack.peek()) {
+    if (item === this.#minStack.top()) {
       this.#minStack.pop()
     }
     return item
   }
 
   min() {
-    return this.#minStack.peek()
+    return this.#minStack.top()
   }
 }
 

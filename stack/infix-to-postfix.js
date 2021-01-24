@@ -13,7 +13,7 @@ const infixToPostfix = (array) => {
 
     if (i === ")") {
       // Add everything until (
-      while (op.peek() !== "(") {
+      while (op.top() !== "(") {
         result.push(op.pop())
       }
       // Remove (
@@ -35,8 +35,8 @@ const infixToPostfix = (array) => {
       // Add all operators that has higher priority than current operator
       while (
         !op.isEmpty() &&
-        Object.keys(OPERATORS).includes(op.peek()) &&
-        OPERATORS[op.peek()] >= OPERATORS[i]
+        Object.keys(OPERATORS).includes(op.top()) &&
+        OPERATORS[op.top()] >= OPERATORS[i]
       ) {
         result.push(op.pop())
       }

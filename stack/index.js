@@ -16,10 +16,10 @@ class Stack {
     return this.#items.pop()
   }
 
-  /** Return the item at the top of the stack
+  /** Get the item at the top of the stack
    * @returns {any} Item at the top
    */
-  peek() {
+  top() {
     return this.#items[this.#items.length - 1]
   }
 
