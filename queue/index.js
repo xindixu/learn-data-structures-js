@@ -46,6 +46,10 @@ class Queue {
   clear() {
     this.#items = []
   }
+
+  print() {
+    return this.#items
+  }
 }
 
 export default Queue
