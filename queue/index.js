@@ -22,7 +22,7 @@ class Queue {
     return this.#items[0]
   }
 
-  /** Get the item at the end of the stack
+  /** Get the item at the end of the queue
    * @returns {any} Item at the end
    */
   tail() {

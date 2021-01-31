@@ -19,6 +19,7 @@
     "prettier"
   ],
   "rules": {
+    "max-classes-per-file": "off",
     "prettier/prettier": [
       "error"
     ],
