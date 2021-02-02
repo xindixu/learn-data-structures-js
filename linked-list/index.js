@@ -123,6 +123,14 @@ class LinkedList {
     return deleteNode.data
   }
 
+  removeHead() {
+    this.remove(0)
+  }
+
+  removeTail() {
+    this.remove(this.length - 1)
+  }
+
   /** Return the index of the first Node whose data equals the given data; Returns -1 if not found
    * @param  {} data
    */
@@ -172,18 +180,25 @@ class LinkedList {
     this.length = 0
   }
 
-  /** Get the head of the links list
+  /** Get the head of the linked list
    * @returns {Node} Head
    */
   head() {
     return this.head
   }
 
-  /** Get the tail of the links list
+  /** Get the tail of the linked list
    * @returns {Node} Tail
    */
   tail() {
     return this.tail
+  }
+
+  /** Get the size of the linked list
+   * @returns {Number}
+   */
+  size() {
+    return this.length
   }
 }
 
